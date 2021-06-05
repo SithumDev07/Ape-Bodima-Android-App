@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".DrawerMenu"
+    android:background="@color/white">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarx"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        app:titleTextColor="@color/Pink"
+        android:layout_height="wrap_content"/>
+    
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

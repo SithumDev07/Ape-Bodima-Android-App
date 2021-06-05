@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayoutUser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:transitionName="dashboard"
+    tools:context=".Client.OccupyPeopleAddWindow"
+    tools:openDrawer="start">
+
+    <!--com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_User"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"/-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Neuro1"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/toolBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="15dp"
+                        android:src="@drawable/menu_drawer"
+                        android:transitionName="drawer" />
+
+                    <ImageView
+                        android:id="@+id/editAccountBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="MoveToEditAccountUser"
+                        android:padding="15dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/account_clip_art"
+                        android:transitionName="userProfile" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/WelcomeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Occupy"
+                        android:textSize="28sp"
+                        android:transitionName="mainTitle" />
+
+
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/AlreadyUserBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#e74c3c"
+                                android:fontFamily="@font/baloo"
+                                android:onClick="MoveToAlreadyUser"
+                                android:text="Already User?"
+                                android:textColor="#fff"
+                                android:transitionName="Already" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/FirstForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="First Name"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/NameInputFirst"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/LastNameForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Last Name"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/NameInputLast"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/regular"
+                                android:text="Enter the occupy date"
+                                android:textSize="18sp" />
+
+                            <DatePicker
+                                android:id="@+id/DatePickerSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:calendarViewShown="false"
+                                android:datePickerMode="spinner"
+                                android:spinnersShown="true"
+                                android:transitionName="DatePicker" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/PhoneNumberForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Phone number"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/NameInputPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/GuardianPhoneNumberForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Guardian phone number"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/NameInputGuardianPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="Choose Gender"
+                                android:textColor="@color/greyUI"
+
+                                android:textSize="18sp" />
+
+                            <RadioGroup
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/MaleChecked"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:buttonTint="@color/black"
+                                    android:text="Male" />
+
+                                <RadioButton
+                                    android:id="@+id/FemaleChecked"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:buttonTint="@color/black"
+                                    android:text="Female" />
+
+                            </RadioGroup>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@color/greyUI" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/regular"
+                                android:text="Address"
+                                android:textSize="18sp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/AddressLine1ForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Line 1"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/AddressLine1Input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/AddressLine2ForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Line 2"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/AddressLine2Input"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/CityForOccupier"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="City"
+                                android:transitionName="username_">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/CityInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/regular"
+                                android:text="Select the boarding"
+                                android:textSize="18sp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/RecyclerViewSelectBoarding"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="10dp"
+                                android:transitionName="Recycler" />
+
+                            <Button
+                                android:id="@+id/OccupyBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#e74c3c"
+                                android:fontFamily="@font/baloo"
+                                android:onClick="UpdateDataClicked"
+                                android:text="OCCUPY"
+                                android:textColor="#fff"
+                                android:transitionName="OccupyAnnex" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

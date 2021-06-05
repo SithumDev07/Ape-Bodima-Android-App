@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/background_clinet_create1"
+    android:gravity="bottom"
+    android:elevation="10dp"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="75dp"
+            android:src="@drawable/java_souls_logo"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/medium"
+            android:text="Ape Bodima"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/nunito_light"
+            android:layout_height="wrap_content"
+            android:text="www.apebodima.com"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

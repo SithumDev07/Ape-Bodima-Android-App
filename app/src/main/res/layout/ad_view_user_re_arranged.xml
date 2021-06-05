@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".AdViewUser">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="130dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <ImageView
+                    android:id="@+id/edit_Acc_backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="15sp"
+                    android:onClick="BacktoWhere"
+                    android:src="@drawable/back_icon"
+                    android:transitionName="animation_back_btn" />
+
+                <ImageView
+                    android:id="@+id/editAccountBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:onClick="MoveToEditAccountWindow"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/account_clip_art"
+                    android:transitionName="userProfile"
+                    app:tint="@color/greyUI" />
+
+            </RelativeLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/LocationsViewAnnexes"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="60dp" />
+
+            <TextView
+                android:id="@+id/LocationAnnexesCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:text="Annex in Kiribathgoda"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/DescriptionAnnex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Lorem Ipsusindustryter tcramble  like Aldus PageMaker including versions of Lorem Ipsum.when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/RatingAnnexAd"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:rating="3.5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/RentalPerMonthAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Rs.7500"
+                android:textSize="35sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:text="Property Type : Annex"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/NoOfRoomsAnnexAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Beds : 4"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/AddressLine1AnnexAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Address : 147/A,"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/AddressLine2AnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Kotikawatta"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/AddressCityAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Ratmalana"
+                android:textSize="16sp" />
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/KeyMoneyMonthsAnnexAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Key money for 3 months"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/KeyMoneyAnnexAd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/regular"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Key money : Rs.25000"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/NoOfBathroomsAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="30dp"
+                android:text="Attached Bathrooms : Yes"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/IsFurnishedAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="30dp"
+                android:text="Is furnished : Yes"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/DistanceAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Distance from the university : 500m"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/PhoneNumberAdAnnex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Contact : 077"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/HelpBtnAnnexAd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#00000000"
+                android:layout_marginTop="100dp"
+                android:elevation="0dp"
+                android:text="Need Help? Annex"
+                android:textColor="#000"
+                android:transitionName="logback" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="300dp"
+            android:backgroundTint="@color/white"
+            android:elevation="8dp"
+            android:src="@drawable/favorites"
+            android:tint="#EA2027"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <me.ibrahimsn.lib.SmoothBottomBar
+            android:id="@+id/BottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:iconSize="20dp"
+            app:iconTint="#757575"
+            app:iconTintActive="#212121"
+            app:indicatorColor="#ECECEC"
+            app:indicatorRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/navigation_menu"
+            app:textColor="#212121"
+            app:textSize="15sp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

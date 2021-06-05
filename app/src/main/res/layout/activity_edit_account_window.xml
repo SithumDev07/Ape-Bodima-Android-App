@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAccountWindow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/black"
+            android:padding="20sp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/UserProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerVertical="true"
+                android:onClick="ChangeProfile"
+                android:src="@drawable/profile_login_activity"
+                android:transitionName="userProfile" />
+
+            <TextView
+                android:id="@+id/FullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/UserProfile"
+                android:fontFamily="@font/baloo"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Sithum Dashantha"
+                android:transitionName="FullName"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/NIC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/FullName"
+                android:layout_toRightOf="@id/UserProfile"
+                android:includeFontPadding="false"
+                android:text="992671769"
+                android:layout_marginLeft="10dp"
+                android:textAllCaps="true"
+                android:transitionName="UserNIC"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:padding="20sp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/FavouritesCardView"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/RelativeAdCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="CardView"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/favoritesIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/favorites" />
+
+                    <TextView
+                        android:id="@+id/SavedAdsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/favoritesIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Saved Ads" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/SavedAdsText"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="15" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/AdvancedUpdatesCardView"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="ExpandEditAdvanced"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/AboutImageIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/settings_further" />
+
+                    <TextView
+                        android:id="@+id/AboutText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/AboutImageIcon"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Edit Advanced" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                android:transitionName="FirstName"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="LastName"
+                android:transitionName="LastName"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:transitionName="PhoneNumber"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/MainPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:transitionName="Email"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:transitionName="UpdateBtn"
+                android:background="@color/black"
+                android:fontFamily="@font/baloo"
+                android:text="Update"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/TextLiving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="you are currently in"
+                android:textAllCaps="true"
+                android:textColor="@color/lightGrey"
+                android:textSize="21sp"
+                android:transitionName="you are currently in" />
+
+            <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                android:id="@+id/OccupyAd"
+                android:layout_width="380dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:neomorph_background_color="@color/Neuro1"
+                app:neomorph_corner_radius="16dp"
+                app:neomorph_elevation="6dp"
+                app:neomorph_highlight_color="@color/Neuro3"
+                app:neomorph_shadow_color="@color/Neuro2"
+                app:neomorph_shadow_type="outer"
+                app:neomorph_view_type="rectangular">
+
+                <TextView
+                    android:id="@+id/TitleADUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_light"
+                    android:paddingLeft="17dp"
+                    android:paddingTop="10dp"
+                    android:text=""
+                    android:textColor="@color/Neuro2"
+                    android:textSize="20dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ADImageUser"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="37dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/annex_ad_1" />
+
+                <RatingBar
+                    android:id="@+id/RatingadUser"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="40dp"
+                    android:numStars="5"
+                    android:rating="0"
+                    android:stepSize="0.5"
+                    android:theme="@style/RatingBar" />
+
+                <TextView
+                    android:id="@+id/RentalADUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingLeft="17dp"
+                    android:paddingTop="60dp"
+                    android:text="Rental  :"
+                    android:textColor="@color/Neuro2"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/Title3UserAD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingLeft="17dp"
+                    android:paddingTop="85dp"
+                    android:text="Occupied Since :"
+                    android:textColor="@color/Neuro2"
+                    android:textSize="15dp" />
+
+
+            </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+
+            <RatingBar
+                android:id="@+id/RatingGiveUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+
+            <Button
+                android:id="@+id/GiveRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/black"
+                android:fontFamily="@font/baloo"
+                android:onClick="RatePlace"
+                android:text="Rate Boarding"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

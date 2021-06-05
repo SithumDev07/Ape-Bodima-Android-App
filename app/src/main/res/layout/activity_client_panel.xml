@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Neuro1"
+    android:orientation="vertical"
+    tools:context=".ClientPanel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/antic"
+                android:padding="15dp"
+                android:text="Welcome To The Panel"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/BoardingAds"
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#6ab04c"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="MoveToAllBoardings"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/favoritesIcon"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/home_icon" />
+
+                            <TextView
+                                android:id="@+id/SavedAdsText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/favoritesIcon"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="Boarding Ads" />
+
+                            <TextView
+                                android:id="@+id/NOOfBoardingsAdsView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/SavedAdsText"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="0" />
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/AdvancedUpdatesCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="125dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/UserProfile"
+                        app:cardElevation="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="MoveToAllAnnexes"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:id="@+id/AnnexAds"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/home_icon" />
+
+                            <TextView
+                                android:id="@+id/AnnexAdsTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/AnnexAds"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="Annexes Ads" />
+
+                            <TextView
+                                android:id="@+id/NoOfAnnexAdsView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/AnnexAdsTitle"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:text="0" />
+
+                        </RelativeLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/lightGrey" />
+
+                    <TextView
+                        android:id="@+id/BoardingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Boardings"
+                        android:textAllCaps="true"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="30sp"
+                        android:transitionName="boarding" />
+
+
+                    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                        android:id="@+id/BoardingAD"
+                        android:layout_width="380dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:neomorph_background_color="@color/Neuro1"
+                        app:neomorph_corner_radius="16dp"
+                        app:neomorph_elevation="6dp"
+                        app:neomorph_highlight_color="@color/Neuro3"
+                        app:neomorph_shadow_color="@color/Neuro2"
+                        app:neomorph_shadow_type="outer"
+                        app:neomorph_view_type="rectangular">
+
+                        <TextView
+                            android:id="@+id/TitleBoarding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_light"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="10dp"
+                            android:text=""
+                            android:textColor="@color/Neuro2"
+                            android:textSize="20dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/BoardingAdImage"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/annex_ad_1" />
+
+                        <RatingBar
+                            android:id="@+id/Ratingad1"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:paddingLeft="16dp"
+                            android:rating="0"
+                            android:stepSize="1"
+                            android:theme="@style/RatingBar" />
+
+                        <TextView
+                            android:id="@+id/NoOfBedsBR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="55dp"
+                            android:text="Beds : "
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/RentalPerMonthBR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="70dp"
+                            android:text="Rental per montth :"
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/MaleOrFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="85dp"
+                            android:text="Boarding for "
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+
+                    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+                    <TextView
+                        android:id="@+id/NothingBoardings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_light"
+                        android:layout_gravity="center_horizontal"
+                        android:text="You have no boarding ads"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/AddBoarding"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#009432"
+                        android:layout_marginTop="20dp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/baloo"
+                        android:text="Add Another Ad"
+                        android:transitionName="addAnother" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/lightGrey" />
+
+                    <TextView
+                        android:id="@+id/AnnexText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:text="Annexes"
+                        android:textAllCaps="true"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="30sp"
+                        android:transitionName="annex" />
+
+
+                    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+                        android:id="@+id/AnnexAD"
+                        android:layout_width="380dp"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:neomorph_background_color="@color/Neuro1"
+                        app:neomorph_corner_radius="16dp"
+                        app:neomorph_elevation="6dp"
+                        app:neomorph_highlight_color="@color/Neuro3"
+                        app:neomorph_shadow_color="@color/Neuro2"
+                        app:neomorph_shadow_type="outer"
+                        app:neomorph_view_type="rectangular">
+
+                        <TextView
+                            android:id="@+id/AdTextAnx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_light"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="10dp"
+                            android:text=""
+                            android:textColor="@color/Neuro2"
+                            android:textSize="20dp" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/AnnexAdImage"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/annex_ad_1" />
+
+                        <RatingBar
+                            android:id="@+id/Ratingad2"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:paddingLeft="16dp"
+                            android:rating="0"
+                            android:stepSize="1"
+                            android:theme="@style/RatingBar" />
+
+                        <TextView
+                            android:id="@+id/NoOfRoomsANX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="55dp"
+                            android:text="NoOfRooms : "
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/RentalPerMonthANX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="70dp"
+                            android:text="Rental per montth :"
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/IsAvailable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:paddingLeft="17dp"
+                            android:paddingTop="85dp"
+                            android:text=""
+                            android:textColor="@color/Neuro2"
+                            android:textSize="15dp" />
+
+
+                    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+                    <TextView
+                        android:id="@+id/NothingAnnexes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_light"
+                        android:layout_gravity="center_horizontal"
+                        android:text="You have no annex ads"
+                        android:textColor="@color/lightGrey"
+                        android:textSize="26sp" />
+
+                    <Button
+                        android:id="@+id/AddAnnex"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#009432"
+                        android:layout_marginTop="20dp"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/baloo"
+                        android:text="Add Another Annex Ad" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

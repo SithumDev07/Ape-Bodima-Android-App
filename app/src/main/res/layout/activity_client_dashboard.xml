@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientDashboard">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:scaleX="1.4"
+        android:scaleY="1.4"
+        app:srcCompat="@drawable/logo_holder_snow_big" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/card_main_background"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            app:srcCompat="@drawable/profile_card" />
+
+        <TextView
+            android:id="@+id/AnnexInKelaniyaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="#EAEAEA"
+            android:layout_marginLeft="90dp"
+            android:text="Annex in Dalugama" />
+
+        <TextView
+            android:id="@+id/DateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AnnexInKelaniyaText"
+            android:textSize="18dp"
+            android:fontFamily="@font/nunito_light"
+            android:textColor="#EAEAEA"
+            android:layout_marginLeft="210dp"
+            android:paddingTop="20dp"
+            android:layout_marginTop="20dp"
+            android:text="7:13  Dec 5" />
+    </RelativeLayout>
+
+
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:scaleX="1.4"
+        android:scaleY="1.4"
+        android:background="@color/white"
+        app:srcCompat="@drawable/logo_holder_snow_big" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/DashboardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:textSize="24dp"
+            android:textColor="@color/greyUI"
+            android:fontFamily="@font/light"
+            android:text="Dashboard" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">JavaSouls2</string>
+    <string name="login">Login</string>
+    <string name="Slogan">We will help you to find your place</string>
+    <string name="powerd_by">Powered By Java Souls</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_add_boarding_house_rooms_window">AddBoardingHouseRoomsWindow
+    </string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="explore">Explore</string>
+    <string name="home">Home</string>
+    <string name="myAccount">Account</string>
+
+</resources>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Neuro1"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="30dp"
+    android:paddingRight="10dp"
+    tools:context=".Client.ClientEditAccountWindow">
+
+    <ImageView
+        android:id="@+id/edit_Acc_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        android:onClick="BackToSearchMenu"
+        android:transitionName="animation_back_btn" />
+
+    <TextView
+        android:id="@+id/EditAccTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Edit account"
+        android:textAllCaps="true"
+        android:textColor="@color/greyUI"
+        android:textSize="30sp"
+        android:transitionName="mainTitle" />
+
+    <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+        android:id="@+id/BoardingAD"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        app:neomorph_background_color="@color/Neuro1"
+        app:neomorph_corner_radius="16dp"
+        app:neomorph_elevation="6dp"
+        app:neomorph_highlight_color="@color/Neuro3"
+        app:neomorph_shadow_color="@color/Neuro2"
+        app:neomorph_shadow_type="outer"
+        app:neomorph_view_type="rectangular">
+
+        <!--ImageView
+            android:id="@+id/UserProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/dp_final"
+            android:transitionName="userProfile" /-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="70dp"
+            android:onClick="ChangeProfile"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile_login_activity" />
+
+        <TextView
+            android:id="@+id/FullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@id/UserProfile"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:text="Jayantha Chandrasiri"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/NIC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="55dp"
+            android:includeFontPadding="false"
+            android:text="992671769"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+    </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Firstname"
+                android:textColorHint="@color/greyUI"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconDrawable="@drawable/name_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Test" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Last Name"
+                android:textColorHint="@color/greyUI"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconDrawable="@drawable/name_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="Test2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Phone Number"
+                android:textColorHint="@color/greyUI"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconDrawable="@drawable/phone_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/MainPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="number"
+                    android:text="1234567890" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Home Phone Number"
+                android:textColorHint="@color/greyUI"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconDrawable="@drawable/phone_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/HomePhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="number"
+                    android:text="1234567890" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Email Address"
+                android:textColorHint="@color/greyUI"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconDrawable="@drawable/email_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:text="service@apebodima.com" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Change Password"
+                android:textColorHint="@color/greyUI"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconDrawable="@drawable/key_icon"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/changePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textPassword"
+                    android:text="service@apebodima.com" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#27ae60"
+                android:fontFamily="@font/baloo"
+                android:text="Update"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

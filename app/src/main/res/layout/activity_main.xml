@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="80dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:src="@drawable/logo_java_souls_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Grow\nYour Business"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/greyUI"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="We will help you to grow your business through online services"
+            android:textAlignment="center"
+            android:textColor="@color/greyUI" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/UserBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="#1e90ff"
+                android:text="Student"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/ClientBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#1e90ff"
+                android:onClick="callLoginScreen"
+                android:text="Owner"
+                android:textColor="@color/white"
+                android:transitionName="transition_client" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:onClick="MoveToCheckImage"
+            android:text="How it works"
+            android:textColor="@color/greyUI" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Powered by JavSouls" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

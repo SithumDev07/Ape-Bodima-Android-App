@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_clinet_create1"
+    android:padding="30dp"
+    tools:context=".AddPhotoBoardingHouseRooms">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="120dp">
+
+        <ImageView
+            android:id="@+id/create_Acc_backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/CreateAccTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:text="Add Photos"
+            android:textAllCaps="true"
+            android:textColor="@color/greyUI"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/regular"
+            android:text="maximum upto five"
+            android:textColor="@color/greyUI"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/AnnexPhoto1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="SelectPhoto1"
+                android:src="@drawable/photo_add_icon_clipart" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/AnnexPhoto2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="SelectPhoto2"
+                android:src="@drawable/photo_add_icon_clipart" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/AnnexPhoto3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="SelectPhoto3"
+                android:src="@drawable/photo_add_icon_clipart" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/AnnexPhoto4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="SelectPhoto4"
+                android:src="@drawable/photo_add_icon_clipart" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/AnnexPhoto5"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="SelectPhoto5"
+                android:src="@drawable/photo_add_icon_clipart" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/SelectPictureBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            android:elevation="5dp"
+            android:text="Add Another Room"
+            android:onClick="AddAnother"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/UploadPicturesBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            android:elevation="5dp"
+            android:onClick="UploadPhotos"
+            android:text="Done"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:transitionName="prelogin" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

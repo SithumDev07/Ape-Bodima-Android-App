@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.javasouls2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JavaSouls2">
+        <activity android:name=".User.EditAdvancedWindow"></activity>
+        <activity android:name=".Client.OccupyPeoplePanel2" />
+        <activity android:name=".UserCreateAcc3" />
+        <activity android:name=".FilteredAnnexesWindow" />
+        <activity android:name=".FilterMenuAnnexes" />
+        <activity android:name=".FilteredBoardingsWindow" />
+        <activity android:name=".FilterMenuBoardings" />
+        <activity android:name=".User.FilterAndSearchMenuUser" />
+        <activity android:name=".AdEditWindowClinetBoarding" />
+        <activity android:name=".Client.AdEditWindowClient" />
+        <activity android:name=".UserPhoto" />
+        <activity android:name=".Client.OccupyPeopleAlreadyUserAnnex" />
+        <activity android:name=".OccupyPeopleAnnexPanel" />
+        <activity android:name=".AddPhotoBoardingHouseRooms" />
+        <activity android:name=".AdViewUserBoarding" />
+        <activity android:name=".AddPhotoAnnex" />
+        <activity android:name=".TestDemoDeleteAfter" />
+        <activity android:name=".AdViewUser" />
+        <activity android:name=".ImageUploadDeleteAfter" />
+        <activity android:name=".Client.OccupyPeopleAlreadyUserBoarding" />
+        <activity android:name=".Client.OccupyPeopleAddWindow" />
+        <activity android:name=".Client.OccupyPeoplePanel" />
+        <activity android:name=".Client.AllAnnexes" />
+        <activity android:name=".Client.AllBoardings" />
+        <activity android:name=".AddedBoardingSplash" />
+        <activity android:name=".BoardingResults" />
+        <activity android:name=".AnnexesResult" />
+        <activity android:name=".AddAnnexWindow" />
+        <activity android:name=".Client.SplashScreenAfterAnnex" />
+        <activity android:name=".Client.AddBoardingHouseRoomsWindow" />
+        <!--
+activity
+            android:name=".ui.login.AddBoardingHouseRoomsWindow"
+            android:label="@string/title_activity_add_boarding_house_rooms_window" /
+        -->
+        <activity android:name=".Client.AddBoardingHouseWindow" />
+        <activity android:name=".Client.ClientEditAccountWindow" />
+        <activity android:name=".User.UserPrelogin" />
+        <activity android:name=".User.UserLoginSplashScreen" />
+        <activity android:name=".UserDashboard" />
+        <activity android:name=".ClientCreatePt4" />
+        <activity android:name=".DrawerMenu" />
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".DontRun" />
+        <activity android:name=".UserEditAccountWindow" />
+        <activity android:name=".SearchMenu" />
+        <activity android:name=".PreLoginAfterCreate" />
+        <activity android:name=".ClientCreatePt3" />
+        <activity android:name=".ClientCreatePt2" />
+        <activity android:name=".ClientCreateAccount" />
+        <activity android:name=".EditAccountWindow" />
+        <activity android:name=".ClientLoginWindow" />
+        <activity android:name=".FinalProfileClientExit" />
+        <activity android:name=".ClientDashboard" />
+        <activity android:name=".UserCreateAcc2" />
+        <activity android:name=".ClientPanel" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CreateAccountAcitivity1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

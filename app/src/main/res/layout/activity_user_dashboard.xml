@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayoutUser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:transitionName="dashboard"
+    tools:context=".UserDashboard"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_User"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/toolBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="15dp"
+                        android:onClick="OpenDrawer"
+                        android:src="@drawable/menu_drawer"
+                        android:transitionName="drawer" />
+
+                    <ImageView
+                        android:id="@+id/editAccountBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="moveToEditAccount"
+                        android:padding="15dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/my_account"
+                        android:transitionName="userProfile" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="40dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/WelcomeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:text="Welcome"
+                            android:textSize="28sp"
+                            android:transitionName="WelcomeText" />
+
+                        <RelativeLayout
+                            android:id="@+id/SearchBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/WelcomeText"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="SearchAndFilter"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/white"
+                            android:elevation="8dp"
+                            android:transitionName="Searchbar">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="Search" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="15dp"
+                                android:padding="5dp"
+                                android:src="@drawable/search_icon" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/MainTwoButtons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:transitionName="MainButtons">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/AnnexBtn"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/card1"
+                                android:elevation="8dp"
+                                android:onClick="MoveToAnnexResults">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/home_icon" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Annexes"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/BoardingResults"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/card2"
+                                android:elevation="8dp"
+                                android:onClick="MoveToBoardingResults">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/home_icon" />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Boardings"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#AFF6D0"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/backgroundAd1"
+                            android:layout_width="170dp"
+                            android:layout_height="280dp"
+                            android:layout_margin="10dp"
+                            android:background="#92DEA0"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="15dp"
+                                android:text="Annexes"
+                                android:textColor="@color/lightGrey"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/nunito_light"
+                                android:padding="10dp"
+                                android:text="Swipe and explore annexes arround Kelaniya"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-15dp"
+                                android:src="@drawable/swipe" />
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/adRecycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_toRightOf="@id/backgroundAd1">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TopRatingsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/nunito_light"
+                            android:text="Top Ratings"
+                            android:textSize="24sp"
+                            android:transitionName="TitleRating" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/RecyclerViewAnnexesTopRated"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/TopRatingsTextBoardings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/nunito_light"
+                            android:text="Top Ratings"
+                            android:textSize="24sp"
+                            android:transitionName="TitleRating" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/RecyclerViewBoardingsTopRated"
+                            android:layout_width="match_parent"
+                            android:layout_height="350dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

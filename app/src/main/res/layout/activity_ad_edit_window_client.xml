@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_clinet_create1"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="30dp"
+    android:paddingRight="30dp"
+    tools:context=".Client.AdEditWindowClient">
+
+    <ImageView
+        android:id="@+id/create_Acc_backButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        android:transitionName="animation_back_btn" />
+
+    <TextView
+        android:id="@+id/CreateAccTextTitleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="edit annex details"
+        android:textAllCaps="true"
+        android:textColor="@color/greyUI"
+        android:textSize="30sp"
+        android:transitionName="boarding" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:paddingBottom="80dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/AddressTextEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Address"
+                android:textColor="@color/greyUI"
+                android:textSize="26sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Line 1"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AddressLine1Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Line 2"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AddressLine2Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Line 3"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AddressLine3Edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AddressCityEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Postal Code (XXXXX)"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AddressPostalCodeEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/lightGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Tell us how far from the university?"
+                android:textColor="@color/greyUI"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Distance in meters"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AnnexDistanceEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/lightGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="Tell us how many number of rooms?"
+                android:textColor="@color/greyUI"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of rooms"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/AnnexNoOfRoomsEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Is occupied?"
+                android:textColor="@color/greyUI"
+
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/IsOccupiedYesEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@color/black"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/IsOccupiedNoEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:buttonTint="@color/black"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Key Money Months"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/KeyMoneyMonthsEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Key Money"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/KeyMoneyEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rental Per Month"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/RentalPerMonthEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of bathrooms"
+                android:textColorHint="@color/greyUI"
+                app:boxStrokeColor="@color/greyUI"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                app:hintTextColor="@color/greyUI"
+                app:passwordToggleTint="@color/greyUI"
+                app:startIconTint="@color/greyUI">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/NoOfBathroomsEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Is Furnished?"
+                android:textColor="@color/greyUI"
+
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/IsFurnishedYesEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@color/black"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/IsFurnishedNoEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:buttonTint="@color/black"
+                    android:text="No" />
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/NextBtnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/black"
+                android:elevation="5dp"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:transitionName="addAnother" />
+
+            <Button
+                android:id="@+id/DeleteBtnEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#eb4d4b"
+                android:elevation="5dp"
+                android:text="Delete"
+                android:textColor="@color/white"
+                android:transitionName="addAnotherDelete" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

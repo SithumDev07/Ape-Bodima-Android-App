@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/lightGrey</item>
+        <item name="colorControlActivated">@color/duskYellow</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+    
+    <style name="LableStyle">
+
+        <item name="android:background">@drawable/background_button</item>
+        <item name="android:textColor">#FFF</item>
+
+    </style>
+</resources>

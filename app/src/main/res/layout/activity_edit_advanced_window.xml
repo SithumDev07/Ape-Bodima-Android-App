@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="dashboard"
+    android:id="@+id/MainLayout"
+    tools:context=".EditAccountWindow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/black"
+            android:padding="20sp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/UserProfile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="ChangeProfile"
+                android:layout_centerHorizontal="true"
+                android:transitionName="userProfile"
+                android:src="@drawable/profile_login_activity" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:padding="20sp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/FavouritesCardView"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/AdCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="CardView"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/FullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/baloo"
+                        android:includeFontPadding="false"
+                        android:text="Sithum Dashantha"
+                        android:transitionName="FullName"
+                        android:textAllCaps="true"
+                        android:textColor="@color/greyUI"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/NIC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/FullName"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="992671769"
+                        android:transitionName="UserNIC"
+                        android:textAllCaps="true"
+                        android:textColor="@color/greyUI"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/PasswordUserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:transitionName="FirstName"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PasswordInputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/GuardianPhoneNumberUserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                android:layout_height="wrap_content"
+                android:hint="Guardian Phone Number"
+                android:transitionName="LastName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/GuardianInputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/slogan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/antic"
+                android:text="Address"
+                android:textSize="18sp"
+                android:transitionName="slogan_text" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/AddressLine1UserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                android:layout_height="wrap_content"
+                android:hint="Line 1"
+                android:transitionName="PhoneNumber">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Line1InputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/AddressLine2UserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                android:layout_height="wrap_content"
+                android:hint="Line 2"
+                android:transitionName="Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Line2InputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/CityUserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:transitionName="username_">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/CityInputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/PostalUserAdvanced"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/greyUI"
+                android:layout_height="wrap_content"
+                android:hint="Postal Code"
+                android:transitionName="UpdateBtn">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/PostalInputUserAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <Button
+                android:id="@+id/Update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:onClick="UpdateAccount"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo"
+                android:text="Update" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

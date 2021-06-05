@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayoutUser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:transitionName="dashboard"
+    tools:context=".FilterMenuAnnexes"
+    tools:openDrawer="start">
+
+    <!--com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view_User"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" /-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize">
+
+                    <ImageView
+                        android:id="@+id/toolBarFilterAnnex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="15dp"
+                        android:src="@drawable/menu_drawer"
+                        android:transitionName="drawer" />
+
+                    <ImageView
+                        android:id="@+id/editAccountBtnFilterAnnex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="moveToEditAccount"
+                        android:padding="15dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/my_account"
+                        android:transitionName="userProfile" />
+
+                    <!--de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/editAccountBtn"
+                        android:layout_width="25sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="moveToClientEditAccount"
+                        android:layout_marginRight="10dp"
+                        android:transitionName="userProfile"
+                        android:src="@drawable/my_account"
+                        android:layout_height="25sp"
+                        /-->
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="40dp">
+
+                    <TextView
+                        android:id="@+id/TitleAnnex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/nunito_light"
+                        android:text="Filter Annexes"
+                        android:textSize="24sp"
+                        android:transitionName="TitleRating" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Furnished?"
+                            android:textSize="20sp" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/FurnishedYesRadioAnnex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:text="Yes" />
+
+                            <RadioButton
+                                android:id="@+id/FurnishedNoRadioAnnex"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="No" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Price Range?"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="30dp"
+                                android:hint="From"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/PriceFromAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:hint="To"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/PriceToAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Rooms?"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:hint="Rooms"
+                        android:textColorHint="@color/greyUI"
+                        app:boxStrokeColor="@color/greyUI"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/greyUI">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/RoomsFilterAnnex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Bathrooms?"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:hint="Bathrooms"
+                        android:textColorHint="@color/greyUI"
+                        app:boxStrokeColor="@color/greyUI"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/greyUI">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/BathroomsFilterAnnex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Key Money Range?"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="30dp"
+                                android:hint="From"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KeyMoneyFromAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:hint="To"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/KeyMoneyToAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Distance from the university?"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="30dp"
+                                android:hint="From"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/DistanceFromAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:hint="To"
+                                android:textColorHint="@color/greyUI"
+                                app:boxStrokeColor="@color/greyUI"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconMode="clear_text"
+                                app:endIconTint="@color/greyUI">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/DistanceToAnnex"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:inputType="number" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Area?"
+                        android:textSize="20sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:hint="City"
+                        android:textColorHint="@color/greyUI"
+                        app:boxStrokeColor="@color/greyUI"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="@color/greyUI">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/AreaFilterAnnex"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/FilterBtnAnnex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#e74c3c"
+                        android:fontFamily="@font/baloo"
+                        android:onClick="FilterGoAnnexes"
+                        android:text="Filter Annexes"
+                        android:textColor="#fff"
+                        android:transitionName="Already" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

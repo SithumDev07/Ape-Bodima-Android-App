@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="250dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <!--ImageView
+            android:id="@+id/OccupierProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@drawable/photo_adfirst" /-->
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/OccupierProfile"
+            android:layout_marginTop="25dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile_login_activity" />
+
+        <TextView
+            android:id="@+id/OccupierName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:text="Sithum Dashantha"
+            android:textColor="#57606f"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/AgeOfOccupier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:text="21 Years"
+            android:textColor="@color/lightGrey" />
+
+        <TextView
+            android:id="@+id/OccupierPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/regular"
+            android:text="0766108500"
+            android:textColor="@color/lightGrey" />
+
+        <TextView
+            android:id="@+id/OccupiedSince"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/regular"
+            android:text="Since January 2021"
+            android:textColor="@color/lightGrey" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
